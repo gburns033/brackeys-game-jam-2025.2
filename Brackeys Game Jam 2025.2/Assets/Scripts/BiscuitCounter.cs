@@ -20,7 +20,10 @@ public class BiscuitCounter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
-        biscuits++;
+        if (other.CompareTag("Biscuit"))
+        {
+            Destroy(other.gameObject);
+            biscuits++;
+        }
     }
 }
