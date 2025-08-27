@@ -25,7 +25,8 @@ public class EndScreen : MonoBehaviour
         if (other.CompareTag("Exit"))
         {
             endScreen.SetActive(true);
-            scoreText.text = "Score: " + ((biscuitCounter.biscuits + 1) * ((int)(Time.time - startTime) * 100)) * 10;
+            scoreText.text = "Score: " + ((biscuitCounter.biscuits + 1) * ((int)(Time.time - startTime) * 100)) * 10
+                + "\nTime: " + (int)(Time.time - startTime);
         }
     }
 }
