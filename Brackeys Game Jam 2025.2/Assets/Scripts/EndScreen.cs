@@ -6,18 +6,18 @@ public class EndScreen : MonoBehaviour
     public GameObject endScreen;
     public TMP_Text scoreText;
     public BiscuitCounter biscuitCounter;
-    private int time;
+    private float startTime;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        time = 0;
+        startTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        time++;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +25,7 @@ public class EndScreen : MonoBehaviour
         if (other.CompareTag("Exit"))
         {
             endScreen.SetActive(true);
-            scoreText.text = "Score: " + (biscuitCounter.biscuits * time);
+            scoreText.text = "Score: " + ((biscuitCounter.biscuits + 1) * ((int)(Time.time - startTime) * 100)) * 10;
         }
     }
 }
