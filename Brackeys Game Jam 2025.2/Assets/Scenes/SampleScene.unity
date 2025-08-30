@@ -2324,7 +2324,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -10}
   smoothness: 10
   minPos: {x: -9.7, y: -4.3}
-  maxPos: {x: 10.7, y: 8.3}
+  maxPos: {x: 18.7, y: 13.3}
 --- !u!1 &549306948
 GameObject:
   m_ObjectHideFlags: 0
